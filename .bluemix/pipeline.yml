@@ -13,7 +13,7 @@ stages:
     build_type: shell
     script: |-
       #!/bin/bash
-      wget https://raw.githubusercontent.com/canha/golang-tools-install-script/master/main.sh
+      wget https://raw.githubusercontent.com/canha/golang-tools-install-script/master/main.sh >/dev/null 2>&1
       bash main.sh --64
       source $HOME/.profile
       make
