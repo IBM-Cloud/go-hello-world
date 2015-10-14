@@ -1,1 +1,1 @@
-worker: slack-disable-2fa
+worker: go-hello-world

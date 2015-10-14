@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"os"
 )
 
 func main() {
@@ -22,5 +23,9 @@ func main() {
 		})
 	})
 
-	router.Run(":8080")
+	port := os.Getenv("VCAP_APP_PORT")
+	if port == "" {
+		port = "8080"
+	}
+	router.Run(":" + port)
 }

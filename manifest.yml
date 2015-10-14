@@ -1,11 +1,10 @@
 applications:
 - path: .
-  memory: 512MB
+  memory: 128M
   instances: 1
   domain: mybluemix.net
   name: go-hello-world
-  host: go-hello-world
-  random-route: true
+  host: go-hello-world-${random-word}
   disk_quota: 1024M
-  command: slack-disable-2fa
+  command: go-hello-world
   buildpack: https://github.com/cloudfoundry/go-buildpack.git
