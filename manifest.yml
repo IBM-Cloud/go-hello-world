@@ -4,7 +4,7 @@ applications:
   instances: 1
   domain: mybluemix.net
   name: go-hello-world
-  host: go-hello-world-${random-word}
+  host: go-hello-world
   disk_quota: 1024M
   command: go-hello-world
   buildpack: https://github.com/cloudfoundry/go-buildpack.git
