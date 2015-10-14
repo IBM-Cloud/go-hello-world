@@ -63,53 +63,29 @@ And voila! You now have your very own instance of the Go Hello World app running
 
 ## Run the app locally
 
-1. Create a Bluemix Account
+1. [Install Go][go_install_url].  If you have Go installed skip to step 2.
 
-    [Sign up for Bluemix][bluemix_signup_url], or use an existing account.
+2. `cd` into the GOPATH directory
 
-2. If you have not already, [download node.js][download_node_url] and install it on your local machine.
+  ```
+  cd $GOPATH
+  ```
 
 3. Clone the app to your local environment from your terminal using the following command:
 
   ```
-  git clone https://github.com/IBM-Bluemix/watson-travel-qa.git
+  git clone https://github.com/IBM-Bluemix/go-hello-world.git
   ```
 
-4. cd into this newly created directory
+4. `cd` into this newly created directory
 
-5. Deploy a placeholder app to Bluemix. We need to perform additional steps once it is deployed, so we will add the `--no-start` argument:
-
-  ```
-  $ cf push --no-start
-  ```
-
-6. Create the Watson Q&A service in Bluemix:
+5. Compile the Go code:
 
   ```
-  $ cf create-service question_and_answer question_and_answer_free_plan travel-qa
+  $ make
   ```
 
-7. Bind the Watson Q&A service to the placeholder app:
-
-  ```
-  $ cf bind-service watson-travel-qa travel-qa
-  ```
-
-8. Now grab the credentials for this service from the Bluemix dashboard and replace the default configs in `vcap-local.json`
-
-9. Install the required npm and bower packages using the following command:
-
-  ```
-  npm install
-  ```
-
-10. Start your app locally with the following command:
-
-  ```
-  npm start
-  ```
-
-Your app will be automatically assigned to a port which will be logged to your terminal. To access the app, go to localhost:PORT in your browser. Happy developing!
+Your app will be automatically be available on port 8080. To access the app, go to localhost:8080 in your browser. Happy developing!
 
 ## Contribute
 We are more than happy to accept external contributions to this project, be it in the form of issues and pull requests. If you find a bug, please report it via the [Issues section][issues_url] or even better, fork the project and submit a pull request with your fix! Pull requests will be evaulated on an individual basis based on value add to the sample application.
