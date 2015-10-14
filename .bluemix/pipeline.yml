@@ -13,6 +13,9 @@ stages:
     build_type: shell
     script: |-
       #!/bin/bash
+      wget https://raw.githubusercontent.com/canha/golang-tools-install-script/master/main.sh
+      bash main.sh --64
+      source $HOME/.profile
       make
 - name: Deploy
   inputs:
