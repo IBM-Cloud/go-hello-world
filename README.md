@@ -1,7 +1,7 @@
 #go-hello-world Overview
 
 This app is a hello world plus a little big of basic functionality using Golang.
-The application uses [Gin-Gonic][gin-gonic-url] for the app router and for templating.
+The application uses [Gin-Gonic][gin_gonic_url] for the app router and for templating.
 
 ## Running the app on Bluemix
 
@@ -114,5 +114,5 @@ This data is collected from the VCAP_APPLICATION environment variable in IBM Blu
 [bluemix_signup_url]: https://ibm.biz/go-hello-world-signup
 [cloud_foundry_url]: https://github.com/cloudfoundry/cli
 [issues_url]: https://github.com/IBM-Bluemix/go-hello-world/issues
-[gin-gonic-url]: https://github.com/gin-gonic/gin
-[go-install-url]: https://golang.org/doc/install
+[gin_gonic_url]: https://github.com/gin-gonic/gin
+[go_install_url]: https://golang.org/doc/install
