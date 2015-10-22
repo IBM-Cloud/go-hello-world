@@ -5,10 +5,6 @@ The application uses [Gin-Gonic][gin_gonic_url] for the app router and for templ
 
 ## Running the app on Bluemix
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy)
-
-## Running the app on Bluemix
-
 You can deploy your own instance of Go Hello World app to Bluemix. To do this, you can either use the _Deploy to Bluemix_ button for an automated deployment or follow the step below to create and deploy your app manually.
 
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy)
