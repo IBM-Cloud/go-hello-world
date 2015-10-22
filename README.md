@@ -32,26 +32,27 @@ You can deploy your own instance of Go Hello World app to Bluemix. To do this, y
 
 6. `cd` into this newly created directory
 
-7. Open the `manifest.yml` file and change the `host` value to something unique
+7. Compile the Go code:
+
+  ```
+  $ make
+  ```
+
+8. Open the `manifest.yml` file and change the `host` value to something unique
 
   The host you choose will determinate the subdomain of your application's URL:  `<host>.mybluemix.net`
 
-8. Connect to Bluemix in the command line tool and follow the prompts to log in:
+9. Connect to Bluemix in the command line tool and follow the prompts to log in:
 
   ```
   $ cf api https://api.ng.bluemix.net
   $ cf login
   ```
 
-9. Deploy your app to Bluemix:
+10. Deploy your app to Bluemix:
 
   ```
   $ cf push
-  ```
-10. Compile the Go code:
-
-  ```
-  $ make
   ```
 
 
@@ -108,7 +109,7 @@ This data is collected from the VCAP_APPLICATION environment variable in IBM Blu
 ### Disabling Deployment Tracking
 
 [bluemix_signup_url]: https://ibm.biz/go-hello-world-signup
-[cloud_foundry_url]: https://github.com/cloudfoundry/cli
+[cloud_foundry_url]: https://github.com/cloudfoundry/cli/releases
 [issues_url]: https://github.com/IBM-Bluemix/go-hello-world/issues
 [gin_gonic_url]: https://github.com/gin-gonic/gin
 [go_install_url]: https://golang.org/doc/install
