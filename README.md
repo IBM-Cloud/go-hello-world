@@ -114,6 +114,8 @@ This data is collected from the VCAP_APPLICATION environment variable in IBM Blu
 
 ### Disabling Deployment Tracking
 
+To disable deployment tracking for this app remove the following 2 lines [line 5](https://github.com/IBM-Bluemix/go-hello-world/blob/master/go-hello-world.go#L5) and [line 13](https://github.com/IBM-Bluemix/go-hello-world/blob/master/go-hello-world.go#L13) in [go-hello-world.go](https://github.com/IBM-Bluemix/go-hello-world/blob/master/go-hello-world.go)
+
 [bluemix_signup_url]: https://ibm.biz/go-hello-world-signup
 [cloud_foundry_url]: https://github.com/cloudfoundry/cli/releases
 [issues_url]: https://github.com/IBM-Bluemix/go-hello-world/issues
