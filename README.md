@@ -3,6 +3,10 @@
 This app is a hello world plus a little big of basic functionality using Golang.
 The application uses [Gin-Gonic][gin_gonic_url] for the app router and for templating.
 
+## Build Status
+
+[![Build Status](https://travis-ci.org/IBM-Bluemix/go-hello-world.svg?branch=master)](https://travis-ci.org/IBM-Bluemix/go-hello-world)
+
 ## Running the app on Bluemix
 
 You can deploy your own instance of Go Hello World app to Bluemix. To do this, you can either use the _Deploy to Bluemix_ button for an automated deployment or follow the step below to create and deploy your app manually.
