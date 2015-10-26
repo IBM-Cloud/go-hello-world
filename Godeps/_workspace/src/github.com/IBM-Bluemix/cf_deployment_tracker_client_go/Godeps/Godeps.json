@@ -1,0 +1,15 @@
+{
+	"ImportPath": "github.com/IBM-Bluemix/cf_deployment_tracker",
+	"GoVersion": "go1.5.1",
+	"Deps": [
+		{
+			"ImportPath": "github.com/parnurzeal/gorequest",
+			"Comment": "v0.2.9-4-g21a6e64",
+			"Rev": "21a6e64ff1eafbfd8a1f8de5c1fe1d39bb7a63d7"
+		},
+		{
+			"ImportPath": "golang.org/x/net/publicsuffix",
+			"Rev": "47990a1ba55743e6ef1affd3a14e5bac8553615d"
+		}
+	]
+}

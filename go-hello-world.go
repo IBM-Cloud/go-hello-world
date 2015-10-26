@@ -1,12 +1,16 @@
 package main
 
 import (
+	//remove the following line to not have your deployment tracker
+	"github.com/IBM-Bluemix/cf_deployment_tracker_client_go"
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"os"
 )
 
 func main() {
+	//remove the following line to not have your deployment tracker
+	cf_deployment_tracker.Track()
 	router := gin.Default()
 	router.LoadHTMLGlob("templates/*")
 
