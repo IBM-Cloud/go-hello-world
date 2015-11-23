@@ -7,9 +7,7 @@ Also check out a [blog post](https://developer.ibm.com/bluemix/2015/10/28/gettin
 
 ## Build Status
 
-[![Build Status](https://travis-ci.org/IBM-Bluemix/go-hello-world.svg?branch=master)](https://travis-ci.org/IBM-Bluemix/go-hello-world)
-
-![Bluemix Deployments](https://deployment-tracker.mybluemix.net/stats/ec4f40db88c2905bab56e7d183b46d53/badge.svg)
+[![Build Status](https://travis-ci.org/IBM-Bluemix/go-hello-world.svg?branch=master)](https://travis-ci.org/IBM-Bluemix/go-hello-world) ![Bluemix Deployments](https://deployment-tracker.mybluemix.net/stats/ec4f40db88c2905bab56e7d183b46d53/badge.svg)
 
 ## Running the app on Bluemix
 
