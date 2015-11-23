@@ -40,6 +40,10 @@ You can deploy your own instance of Go Hello World app to Bluemix. To do this, y
 
 6. `cd` into this newly created directory
 
+  ```
+  cd go-hello-world
+  ```
+
 7. Compile the Go code:
 
   ```
