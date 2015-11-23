@@ -7,7 +7,7 @@ stages:
   triggers:
   - type: commit
   jobs:
-  - name: go-build
+  - name: go-compile
     type: builder
     artifact_dir: ./
     build_type: shell
@@ -21,7 +21,7 @@ stages:
   inputs:
   - type: job
     stage: Build
-    job: go-build
+    job: go-compile
   jobs:
   - name: Deploy
     type: deployer
