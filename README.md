@@ -26,7 +26,7 @@ You can deploy your own instance of Go Hello World app to Bluemix. To do this, y
 3. Download and install the [Cloud Foundry CLI][cloud_foundry_url] tool
 
 
-4. `cd` into the `$GOPATH` directory
+4. `cd` into the `$GOPATH/src` directory
 
   ```
   cd $GOPATH/src
@@ -74,10 +74,10 @@ And voila! You now have your very own instance of the Go Hello World app running
 
 1. [Install Go][go_install_url].  If you have Go installed skip to step 2.
 
-2. `cd` into the `$GOPATH` directory
+2. `cd` into the `$GOPATH/src` directory
 
   ```
-  cd $GOPATH
+  cd $GOPATH/src
   ```
 
 3. Clone the app to your local environment from your terminal using the following command:
