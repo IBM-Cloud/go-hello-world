@@ -29,7 +29,7 @@ You can deploy your own instance of Go Hello World app to Bluemix. To do this, y
 4. `cd` into the GOPATH directory
 
   ```
-  cd $GOPATH
+  cd $GOPATH/src
   ```
 
 5. Clone the app to your local environment from your terminal using the following command:
