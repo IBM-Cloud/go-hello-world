@@ -74,7 +74,7 @@ And voila! You now have your very own instance of the Go Hello World app running
 
 1. [Install Go][go_install_url].  If you have Go installed skip to step 2.
 
-2. `cd` into the GOPATH directory
+2. `cd` into the `$GOPATH` directory
 
   ```
   cd $GOPATH
