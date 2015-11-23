@@ -3,6 +3,8 @@
 This app is a hello world plus a little big of basic functionality using Golang.
 The application uses [Gin-Gonic][gin_gonic_url] for the app router and for templating.
 
+Also check out a [blog post](https://developer.ibm.com/bluemix/2015/10/28/getting-started-with-golang-on-bluemix/) on this topic as well for a more in depth look at Go and Gin-Gonic.
+
 ## Build Status
 
 [![Build Status](https://travis-ci.org/IBM-Bluemix/go-hello-world.svg?branch=master)](https://travis-ci.org/IBM-Bluemix/go-hello-world)
