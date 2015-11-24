@@ -86,6 +86,11 @@ And voila! You now have your very own instance of the Go Hello World app running
 
 4. `cd` into this newly created directory
 
+  ```
+  cd go-hello-world
+  ```
+
+
 5. Compile the Go code:
 
   ```
