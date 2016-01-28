@@ -1,6 +1,6 @@
 {
 	"ImportPath": "go-hello-world",
-	"GoVersion": "go1.5.1",
+	"GoVersion": "go1.5.3",
 	"Deps": [
 		{
 			"ImportPath": "github.com/IBM-Bluemix/cf_deployment_tracker_client_go",
