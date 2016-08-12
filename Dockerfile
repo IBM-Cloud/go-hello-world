@@ -8,7 +8,7 @@ ADD . /go/src/github.com/IBM-Bluemix/go-hello-world
 RUN cd /go/src/github.com/IBM-Bluemix/go-hello-world;make
 
 # Run the outyet command by default when the container starts.
-ENTRYPOINT /go/src/github.com/IBM-Bluemix/go-hello-world/go-hello-world
+ENTRYPOINT cd /go/src/github.com/IBM-Bluemix/go-hello-world/;./go-hello-world
 
 # Document that the service listens on port 8080.
 EXPOSE 8080
