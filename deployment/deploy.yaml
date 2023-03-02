@@ -17,4 +17,4 @@ spec:
     spec:
       containers:
       - name: go-hello-cnt
-        image: varu33333/golan
+        image: varu33333/golan:dev-2476c8c
