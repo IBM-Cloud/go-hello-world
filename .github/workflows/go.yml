@@ -15,7 +15,7 @@ jobs:
       TAG_PREFIX: dev
       ARGOCD_ENDPOINT: argocd.strategy22.com #without https
       INSECURE: true
-      APP_NAME: golang
+      APP_NAME: gola
       
     steps:
 
