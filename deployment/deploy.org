@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: golang-dev
+  namespace: golang-dev
+  labels:
+    app: golang-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: golang-dev
+  template:
+    metadata:
+      labels:
+        app: golang-dev
+    spec:
+      containers:
+      - name: go-hello-cnt
+        image: varu33333/golan:replace_me
+      imagePullSecrets:
+      - name: regcred02

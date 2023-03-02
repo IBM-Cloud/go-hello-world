@@ -16,6 +16,11 @@ jobs:
       ARGOCD_ENDPOINT: argocd.strategy22.com #without https
       INSECURE: true
       APP_NAME: gola
+
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository..
+      contents: write
       
     steps:
 
@@ -45,6 +50,10 @@ jobs:
       run: |
         git_hash=$(git rev-parse --short "$GITHUB_SHA")
         echo "::set-output name=imagetag::$TAG_PREFIX-$git_hash"
+    - name: Update image tag in manifest
+      run: |
+         sudo cp deployment/deploy.org  deployment/deploy.yaml  && sudo sed -i -e "s|replace_me|$TAG_PREFIX-$$git_hash|" deployment/deploy.yaml
+    - uses: stefanzweifel/git-auto-commit-action@v4
     - name: ArgoCD Application Sync Action
       uses: omegion/argocd-actions@v0.2.0
       with:
