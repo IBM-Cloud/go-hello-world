@@ -8,5 +8,5 @@ COPY custom_apps/main.go /app/
 
 EXPOSE 8080
 
-RUN ["/usr/local/go/bin/go build /app/main.go"]
-CMD [/app/main]
+RUN /usr/local/go/bin/go build /app/main.go
+CMD ["/app/main"]
