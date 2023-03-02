@@ -52,7 +52,7 @@ jobs:
         echo "::set-output name=imagetag::$TAG_PREFIX-$git_hash"
     - name: Update image tag in manifest
       run: |
-         sudo cp deployment/deploy.org  deployment/deploy.yaml  && sudo sed -i -e "s|replace_me|$TAG_PREFIX-$$git_hash|" deployment/deploy.yaml
+         sudo cp deployment/deploy.org  deployment/deploy.yaml  && sudo sed -i -e "s|replace_me|$TAG_PREFIX-$git_hash|" deployment/deploy.yaml
     - uses: stefanzweifel/git-auto-commit-action@v4
     - name: ArgoCD Application Sync Action
       uses: omegion/argocd-actions@v0.2.0
