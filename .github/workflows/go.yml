@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       IMAGE_NAME: golan
+      IMAGE_TAG: ${{ github.run_number }}
       DOCKER_REPOSITORY: ${{ secrets.DOCKER_USERNAME }}
       TAG_PREFIX: dev
       ARGOCD_ENDPOINT: argocd.strategy22.com #without https
@@ -38,12 +39,12 @@ jobs:
     - name: Build the Docker image
       run: |
         git_hash=$(git rev-parse --short "$GITHUB_SHA")
-        docker build --file Dockerfile --tag $DOCKER_REPOSITORY/$IMAGE_NAME:$TAG_PREFIX-$git_hash .
+        docker build --file Dockerfile --tag $DOCKER_REPOSITORY/$IMAGE_NAME:$TAG_PREFIX-$IMAGE_TAG .
     - name: Docker Push
       run: |
         git_hash=$(git rev-parse --short "$GITHUB_SHA")
         echo "Pushing image to Docker Hub..."
-        docker push $DOCKER_REPOSITORY/$IMAGE_NAME:$TAG_PREFIX-$git_hash
+        docker push $DOCKER_REPOSITORY/$IMAGE_NAME:$TAG_PREFIX-$IMAGE_TAG
         echo "::set-output name=image::$DOCKER_REPOSITORY/$IMAGE_NAME:$TAG_PREFIX-$git_hash"
     - name: Get Image Tag
       id: getImageTag
@@ -52,7 +53,7 @@ jobs:
         echo "::set-output name=imagetag::$TAG_PREFIX-$git_hash"
     - name: Update image tag in manifest
       run: |
-         sudo cp deployment/deploy.org  deployment/deploy.yaml  && sudo sed -i -e "s|replace_me|$TAG_PREFIX-$git_hash|" deployment/deploy.yaml
+         sudo cp deployment/deploy.org  deployment/deploy.yaml  && sudo sed -i -e "s|replace_me|$TAG_PREFIX-$IMAGE_TAG|" deployment/deploy.yaml
     - uses: stefanzweifel/git-auto-commit-action@v4
     - name: ArgoCD Application Sync Action
       uses: omegion/argocd-actions@v0.2.0
