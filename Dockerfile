@@ -8,4 +8,4 @@ COPY custom_apps/main.go .
 
 EXPOSE 8080
 
-CMD ["go run main.go"]
+CMD ["/usr/local/go/bin/go run main.go"]
