@@ -1,4 +1,4 @@
-FROM golang:1.17-alpine3.15
+FROM golang:1.20-alpine
 
 WORKDIR /app
 
@@ -8,4 +8,5 @@ COPY custom_apps/main.go .
 
 EXPOSE 8080
 
-CMD ["/usr/local/go/bin/go run main.go"]
+RUN ["/usr/local/go/bin/go build main.go"]
+CMD [./main]
